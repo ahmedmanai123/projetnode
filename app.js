@@ -13,6 +13,8 @@ const scategorieRouter =require("./routes/scategorie.route")
 app.use('/api/scategories', scategorieRouter);
 const articleRouter =require("./routes/article.route") 
 app.use('/api/articles', articleRouter);
+const userRouter =require("./routes/user.route")
+app.use('/api/users', userRouter); 
 mongoose.set("strictQuery", false); 
 // Connexion à la base données
 mongoose.connect(process.env.DATABASECLOUD,{ 
@@ -30,4 +32,5 @@ res.send("bonjour");
 }); 
 app.listen(process.env.PORT, () => { 
 console.log(`Server is listening on port ${process.env.PORT}`); }); 
+
 module.exports = app;

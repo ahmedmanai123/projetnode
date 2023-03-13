@@ -1,4 +1,5 @@
 var express = require('express'); 
+ const auth = require( "../middlewares/auth.js");
 var router = express.Router(); 
 const Categorie=require("../models/categorie")
 // afficher la liste des categories.
